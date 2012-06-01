@@ -53,7 +53,6 @@ module Sikulirc
     def process_result(xml_dump, psc)
       doc = Document.new(xml_dump)
       if doc.elements["/script/status"].text == "FAIL"
-        puts doc.elements["//message"].text
         raise_exception(doc.elements["//message"].text, psc)
       end
     end

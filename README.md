@@ -1,6 +1,6 @@
 # Sikulirc
 
-TODO: Write a gem description
+Ruby wrapped client API of sikuli server
 
 ## Installation
 
@@ -18,7 +18,16 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    require 'sikulirc'
+
+    rs = Sikulirc::RemoteScreen.new("127.0.0.1")
+    rs.click "D:\\1.png"
+    rs.app_focus "title"
+    rs.type_in_field "D:\\field.png", "content"
+    rs.page_down
+    rs.wait "D:\\field.png"
+    rs.find "D:\\field.png"
+    rs.set_min_similarity 0.9
 
 ## Contributing
 
