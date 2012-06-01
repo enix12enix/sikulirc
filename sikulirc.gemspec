@@ -1,16 +1,19 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/sikulirc/version', __FILE__)
+require 'rake'
+
+$:.push File.expand_path("../lib", __FILE__)
+require "sikulirc/version"
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["TODO: Write your name"]
-  gem.email         = ["TODO: Write your email address"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.authors       = ["Enix Shen"]
+  gem.email         = ["enix12enix@hotmail.com"]
+  gem.description   = %q{Allows you to call sikuli remote server.}
+  gem.summary       = %q{Ruby wrapped for sikuli remote server client api}
   gem.homepage      = ""
 
-  gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  gem.files         = `git ls-files`.split("\n")
-  gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  # gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  gem.files         = FileList['lib/**/*', 'bin/*', '[A-Z]*', 'test/**/*'].to_a
+  # gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   gem.name          = "sikulirc"
   gem.require_paths = ["lib"]
   gem.version       = Sikulirc::VERSION
