@@ -4,6 +4,8 @@ Ruby wrapped client API of sikuli server
 
 ## Installation
 
+To get Sikuli Server, Please go to http://github.com/enix12enix/sikuli-remote-control and follow instruction
+
 Add this line to your application's Gemfile:
 
     gem 'sikulirc'
