@@ -40,13 +40,17 @@ module Sikulirc
       execute_command(@serv, "wait", :psc => psc, :timeout => timeout) { |xml_dump| process_result(xml_dump, psc) }
     end
     
+    def drag_drop(psc, xoffset, yoffset)
+      execute_command(@serv, "drag_drop", :psc => psc, :xoffset => xoffset, :yoffset => yoffset)   
+    end
+    
     private
 
     def raise_exception(exception_message, psc)
       if exception_message.include? "FindFailed: can not find"
         raise Sikulirc::ImageNotFound, "The image '#{psc}' does not exist."
       else
-        raise Sikulirc::CommandError, "somthing wrong of the command "
+        raise Sikulirc::CommandError, "Something wrong with the command.\n\n#{exception_message}" 
       end
     end
 
