@@ -8,7 +8,7 @@ To get Sikuli Server, Please go to http://github.com/enix12enix/sikuli-remote-co
 
 Add this line to your application's Gemfile:
 
-    gem 'sikulirc'
+    gem 'sikulirc', :git => 'git://github.com/powerkx/sikulirc.git'
 
 And then execute:
 
