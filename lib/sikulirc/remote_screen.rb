@@ -21,7 +21,7 @@ module Sikulirc
     end
 
     def set_min_similarity(similarity = 0.7)
-      execute_command(@serv, 'set_min_similarity', :content => similarity)
+      execute_command(@serv, 'set_min_similarity', :similarity => similarity)
     end
     
     def click(psc, timeout = 120)
