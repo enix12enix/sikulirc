@@ -1,9 +1,9 @@
-require "sikulirc/version"
+require "sikulinewrc/version"
 
-require "sikulirc/command"
-require "sikulirc/exception"
-require "sikulirc/remote_screen"
+require "sikulinewrc/command"
+require "sikulinewrc/exception"
+require "sikulinewrc/remote_screen"
 
-module Sikulirc
+module Sikulinewrc
   
 end
