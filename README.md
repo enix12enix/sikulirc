@@ -1,4 +1,4 @@
-# Sikulirc
+# Sikulinewrc
 
 Ruby wrapped client API of sikuli server
 
@@ -8,7 +8,7 @@ To get Sikuli Server, Please go to http://github.com/enix12enix/sikuli-remote-co
 
 Add this line to your application's Gemfile:
 
-    gem 'sikulirc', :git => 'git://github.com/powerkx/sikulirc.git'
+    gem 'sikulinewrc', :git => 'git://github.com/powerkx/sikulinewrc.git'
 
 And then execute:
 
@@ -16,13 +16,13 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install sikulirc
+    $ gem install sikulinewrc
 
 ## Usage
 
-    require 'sikulirc'
+    require 'sikulinewrc'
 
-    rs = Sikulirc::RemoteScreen.new("127.0.0.1")
+    rs = Sikulinewrc::RemoteScreen.new("127.0.0.1")
     rs.click "D:\\1.png"
     rs.app_focus "title"
     rs.type_in_field "D:\\field.png", "content"
