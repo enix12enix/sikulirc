@@ -1,4 +1,4 @@
-module Sikulirc
+module Sikulinewrc
   
   class ImageNotFound < StandardError; end
   
