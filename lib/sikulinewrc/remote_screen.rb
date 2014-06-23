@@ -1,9 +1,9 @@
-# require "sikulirc/command"
+# require "sikulinewrc/command"
 
 require "rexml/document"
 require "uri"
 
-module Sikulirc
+module Sikulinewrc
   class RemoteScreen
     include Command
     include REXML
@@ -12,8 +12,8 @@ module Sikulirc
       @serv = URI("http://#{server}:#{port}/script.do")
     end
     
-    def app_focus(app)
-      execute_command(@serv, 'set_min_similarity', :content => app)
+    def app_focus(content)
+      execute_command(@serv, 'app_focus', :content => content)
     end
 
     def page_down
@@ -48,9 +48,9 @@ module Sikulirc
 
     def raise_exception(exception_message, psc)
       if exception_message.include? "FindFailed: can not find"
-        raise Sikulirc::ImageNotFound, "The image '#{psc}' does not exist."
+        raise Sikulinewrc::ImageNotFound, "The image '#{psc}' does not exist."
       else
-        raise Sikulirc::CommandError, "Something wrong with the command.\n\n#{exception_message}" 
+        raise Sikulinewrc::CommandError, "Something wrong with the command.\n\n#{exception_message}" 
       end
     end
 
