@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in sikulirc.gemspec
+# Specify your gem's dependencies in sikulinewrc.gemspec
 gemspec
