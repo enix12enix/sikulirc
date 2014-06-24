@@ -24,7 +24,7 @@ module Sikulinewrc
       execute_command(@serv, 'set_min_similarity', :similarity => similarity)
     end
     
-    def click(psc, timeout = 120)
+    def click(psc, timeout = 30)
       execute_command(@serv, "click", :psc => psc, :timeout => timeout) { |xml_dump| process_result(xml_dump, psc) }
     end
     
@@ -36,7 +36,7 @@ module Sikulinewrc
       execute_command(@serv, 'type_in_field', :psc => psc, :content => content) { |xml_dump| process_result(xml_dump, psc) }
     end
     
-    def wait(psc, timeout = 120)
+    def wait(psc, timeout = 30)
       execute_command(@serv, "wait", :psc => psc, :timeout => timeout) { |xml_dump| process_result(xml_dump, psc) }
     end
     
