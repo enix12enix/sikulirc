@@ -1,4 +1,4 @@
-from sikuli.Sikuli import Screen, Key
+from sikuli.Sikuli import Screen, KEY_ALT
 import time
 scr=Screen()
 time.sleep(3)
