@@ -2,4 +2,4 @@ from sikuli.Sikuli import Screen, KEY_ALT
 import time
 scr=Screen()
 time.sleep(3)
-scr.type(key, KEY_ALT)
+scr.type(prskey, KEY_ALT)
