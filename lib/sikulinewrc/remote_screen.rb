@@ -48,12 +48,12 @@ module Sikulinewrc
       execute_command(@serv, "drag_drop", :psc => psc, :xoffset => xoffset, :yoffset => yoffset)   
     end
     
-    def send_alt_combkey(key)
-      execute_command(@serv, "send_alt_combkey", :key => key)
+    def send_alt_combkey(prskey)
+      execute_command(@serv, "send_alt_combkey", :prskey => prskey)
     end
     
-    def send_ctrl_combkey(key)
-      execute_command(@serv, "send_ctrl_combkey", :key => key)
+    def send_ctrl_combkey(prskey)
+      execute_command(@serv, "send_ctrl_combkey", :prskey => prskey)
     end
 
     private
