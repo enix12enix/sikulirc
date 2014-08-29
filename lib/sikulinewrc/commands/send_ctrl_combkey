@@ -1,5 +1,5 @@
-from sikuli.Sikuli import Screen, Key
+from sikuli.Sikuli import Screen, KEY_CTRL
 import time
 scr=Screen()
 time.sleep(3)
-scr.type(key, KEY_CTRL)
+scr.type(prskey, KEY_CTRL)
