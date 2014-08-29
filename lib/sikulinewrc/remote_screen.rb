@@ -28,6 +28,10 @@ module Sikulinewrc
       execute_command(@serv, "click", :psc => psc, :timeout => timeout) { |xml_dump| process_result(xml_dump, psc) }
     end
     
+    def right_click(psc, timeout = 30)
+      execute_command(@serv, "right_click", :psc => psc, :timeout => timeout) { |xml_dump| process_result(xml_dump, psc) }
+    end
+    
     def find(psc)
       execute_command(@serv, 'find', :psc => psc) { |xml_dump| process_result(xml_dump, psc) }
     end
@@ -44,6 +48,14 @@ module Sikulinewrc
       execute_command(@serv, "drag_drop", :psc => psc, :xoffset => xoffset, :yoffset => yoffset)   
     end
     
+    def send_alt_combkey(key)
+      execute_command(@serv, "send_alt_combkey", :key => key)
+    end
+    
+    def send_ctrl_combkey(key)
+      execute_command(@serv, "send_ctrl_combkey", :key => key)
+    end
+
     private
 
     def raise_exception(exception_message, psc)
