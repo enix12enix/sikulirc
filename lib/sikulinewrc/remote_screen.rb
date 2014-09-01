@@ -28,6 +28,10 @@ module Sikulinewrc
       execute_command(@serv, "click", :psc => psc, :timeout => timeout) { |xml_dump| process_result(xml_dump, psc) }
     end
     
+    def double_click(psc, timeout = 30)
+      execute_command(@serv, "double_click", :psc => psc, :timeout => timeout) { |xml_dump| process_result(xml_dump, psc) }
+    end
+    
     def right_click(psc, timeout = 30)
       execute_command(@serv, "right_click", :psc => psc, :timeout => timeout) { |xml_dump| process_result(xml_dump, psc) }
     end
@@ -46,6 +50,10 @@ module Sikulinewrc
     
     def drag_drop(psc, xoffset, yoffset)
       execute_command(@serv, "drag_drop", :psc => psc, :xoffset => xoffset, :yoffset => yoffset)   
+    end
+    
+    def click_location(xoffset, yoffset)
+      execute_command(@serv, "click_location", :xoffset => xoffset, :yoffset => yoffset)   
     end
     
     def send_alt_combkey(prskey)
