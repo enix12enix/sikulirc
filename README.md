@@ -30,6 +30,9 @@ Or install it yourself as:
     rs.wait "D:\\field.png"
     rs.find "D:\\field.png"
     rs.set_min_similarity 0.9
+    rs.double_click "D:\\field.png"
+    rs.right_click "D:\\field.png"
+    rs.click_location(35, 101) # click an target fixed position on screen 
 
 ## Contributing
 
