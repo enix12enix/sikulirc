@@ -63,6 +63,10 @@ module Sikulinewrc
     def send_ctrl_combkey(prskey)
       execute_command(@serv, "send_ctrl_combkey", :prskey => prskey)
     end
+    
+    def exists(psc, timeout = 30)
+      execute_command(@serv, "exists", :psc => psc, :timeout => timeout)
+    end
 
     private
 
