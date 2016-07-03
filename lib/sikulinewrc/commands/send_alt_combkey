@@ -1,0 +1,5 @@
+from sikuli.Sikuli import Screen, KEY_ALT
+import time
+scr=Screen()
+time.sleep(3)
+scr.type(prskey, KEY_ALT)

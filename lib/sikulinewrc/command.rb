@@ -1,6 +1,6 @@
 require 'net/http'
 
-module Sikulirc
+module Sikulinewrc
   module Command
     
     COMMANDS = {}
